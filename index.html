@@ -155,7 +155,7 @@
             <label htmlFor="relation" class="sr-only">Estado civil</label>
             <input ng-model="formData.relation" ng-change="setInput(this, 'relation')" id="relation" list="relationList" name="relation" type="text" required
               class="appearance-none text-gray-200 rounded-none relative block w-full px-3 py-2 border border-gray-700 bg-gray-900 placeholder-gray-500 text-gray-200 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-              placeholder="ex: solteiro(a), casado(a)" />
+              placeholder="Estado Civil -> ex: solteiro(a), casado(a)" />
             <datalist id="relationList">
               <option>Solteiro(a)</option>
               <option>Casado(a)</option>
@@ -208,11 +208,17 @@
                 <div
                   class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
                   <div class="bg-gray-700 px-4 pt-5 pb-4 sm:p-6 sm:pb-4 flex items-center flex-col">
-                    <p class="text-sm text-center text-gray-500 mt-2">{{ formData.name }}</p>
+                    <p class="text-sm text-center text-gray-500 mt-2">
+                      Seu nome: {{ formData.name }}<br>
+                      Sua profissão: {{ formData.work }}<br>
+                      Sua Nacionalidade: {{ formData.country }}<br>
+                      Seu Estado civil: {{ formData.relation }}<br>
+                      Seu CPF: {{ formData.socialSecurity }}<br>
+                    </p>
                   </div>
             
                   <footer class="bg-gray-800 px-4 py-3 flex align-center justify-center">
-                    <button type="button" ng-click="showDoc = false"
+                    <button type="button" ng-click="disableModal()"
                       class="duration-200 outline-none w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm">
                       Fechar
                     </button>

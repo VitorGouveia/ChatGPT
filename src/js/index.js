@@ -22,8 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     $scope.disableModal = () => {
-      $scope.showModal = false
-      $scope.showDoc = true
+      $scope.showDoc = false
     }
     
     $scope.createDoc = (event) => {
