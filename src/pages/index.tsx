@@ -1,7 +1,13 @@
 export default function Home() {
   return (
-    <>
-      <h1 className="text-5xl text-red-600 font-bold">hello wordl</h1>
-    </>
+    <main>
+      <aside className="w-[240px] border border-white">
+        <h1>aside</h1>
+      </aside>
+
+      <section>
+        <h1>content</h1>
+      </section>
+    </main>
   )
 }
